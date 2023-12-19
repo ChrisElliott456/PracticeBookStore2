@@ -13,7 +13,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void addBook(Book book) {
-        try(PreparedStatement statement = connection.prepareStatement("INSERT INTO books (title, author, genre, price) VALUES (?, ?, ?, ?)")){
+        try(PreparedStatement statement = connection.prepareStatement("INSERT INTO books2 (title, author, genre, price) VALUES (?, ?, ?, ?)")){
             statement.setString(1,book.getTitle());
             statement.setString(2,book.getAuthor());
             statement.setString(3,book.getGenre());
